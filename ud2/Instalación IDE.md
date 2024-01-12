@@ -31,3 +31,8 @@ $ sudo apt update
 $ sudo apt install netbeans
 ```
 - Ya podemos utilizar netbeans.
+- Abrimos NetBeans y configuramos nuestro programa sencillo, en mi caso será una calculadora simple.
+
+![Alt text](img/1.png)
+
+-Vemos que se ejecuta y compila correctamente

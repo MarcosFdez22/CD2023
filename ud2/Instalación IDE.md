@@ -30,9 +30,27 @@ $ sudo apt update
 ``` bash
 $ sudo apt install netbeans
 ```
+
+### Crear un Programa Java
+
 - Ya podemos utilizar netbeans.
+
+
 - Abrimos NetBeans y configuramos nuestro programa sencillo, en mi caso será una calculadora simple.
 
 ![Alt text](img/1.png)
 
--Vemos que se ejecuta y compila correctamente
+- Vemos que se ejecuta y compila correctamente
+
+![Alt text](img/2.png)
+
+
+
+!!ADVERTENCIA¡¡: Nuestro JDK tiene que tener la misma versión que NetBeans, si no, nos saldra el siguiente error:
+
+
+``` bash
+cannot access java.lang
+Fatal Error: Unable to find package java.lang in classpath or 
+bootclasspath
+```

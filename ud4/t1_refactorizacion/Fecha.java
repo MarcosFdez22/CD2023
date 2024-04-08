@@ -14,7 +14,7 @@ this.ano = ano;
 
 }
 
-public boolean valida () {
+public boolean esValido(){
 	
 	if ((dia < 1 || dia > 31)||(mes < 1 || mes > 12)) { 
 		return false;
@@ -40,12 +40,5 @@ int diasMes = 0;
 	}else{
 		return true;	
 	}
-	
-		
-	
 	}
 }
-
-
-
-

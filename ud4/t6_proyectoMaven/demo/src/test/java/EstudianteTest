@@ -1,0 +1,67 @@
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class EstudianteTest {
+
+    private Estudiante estudiante;
+
+    @Before
+    public void setUp() {
+        estudiante = new Estudiante("Juan", 20);
+    }
+
+    @Test
+    public void testSetCalificacion() {
+        estudiante.setCalificacion(7.5);
+        assertEquals(7.5, estudiante.getCalificacion(), 0.01);
+    }
+
+    @Test
+    public void testGetNombre() {
+        assertEquals("Juan", estudiante.getNombre());
+    }
+
+    @Test
+    public void testSetNombre() {
+        estudiante.setNombre("Pedro");
+        assertEquals("Pedro", estudiante.getNombre());
+    }
+
+    @Test
+    public void testGetEdad() {
+        assertEquals(20, estudiante.getEdad());
+    }
+
+    @Test
+    public void testSetEdad() {
+        estudiante.setEdad(25);
+        assertEquals(25, estudiante.getEdad());
+    }
+
+    @Test
+    public void testGetCalificacion() {
+        assertEquals(0.0, estudiante.getCalificacion(), 0.01);
+    }
+
+    @Test
+    public void testAprobo() {
+        estudiante.setCalificacion(4.9);
+        assertFalse(estudiante.aprobo());
+        estudiante.setCalificacion(5.0);
+        assertTrue(estudiante.aprobo());
+    }
+
+    @Test
+    public void testEdadEscolar() {
+        assertEquals(1, estudiante.edadEscolar());
+        estudiante.setEdad(24);
+        assertEquals(2, estudiante.edadEscolar());
+    }
+
+    @Test
+    public void testEsUniversitario() {
+        assertFalse(estudiante.esUniversitario());
+        estudiante.setEdad(18);
+        assertTrue(estudiante.esUniversitario());
+    }
+}
